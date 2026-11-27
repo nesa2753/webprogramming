@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><centre>Online Exam</cenre></title>
+</head>
+<body style="background-color:lightcyan;">
+<form name="exam" onsubmit="return Submit()">
+<h1 align="center">ONLINE EXAM</h1>
+Enter your name:
+ <input type="text" id="name"><br><br>
+Register No:
+<input type="Text" id="reg"><br><br>
+
+Date:
+<input type="date"><br><br>
+
+<h2 align="center">QUESTIONS</h2>
+<h3 align="center">Attend all the questions</h3>
+
+1. What does HTML stand for?<br>
+
+<input type="radio" name="q1" value="A">High Text Markup Language<br>
+<input type="radio" name="q1" value="B">High Text Machine Language<br>
+<input type="radio" name="q1" value="C">Simple Markup Language <br><br>
+
+2.How Many Heading heading tags are available in HTML?<br>
+
+<input type="radio" name="q2" value="A">6<br>
+<input type= "radio" name="q2" value="B">4<br>
+<input type="radio" name="q2" value="C">3<br><br>
+
+3.What is the difference between opening and closing tags?<br>
+
+<input type="radio" name="q3" value="A">Both have slash<br>
+<input type ="radio" name="q3" value="B">closing tag has a slash<br>
+<input type="radio" name="q3" value="C">There is no difference<br><br>
+
+4.Which tag is used to create a hyperlink?<br>
+
+<input type="radio" name="q4" value="A">&lt;a&gt;<br>
+<input type="radio" name="q4" value="B">&lt;p&gt;<br>
+<input type="radio" name="q4" value="C">&lt;hl&gt;<br><br>
+
+5.Which tag is used to image?<br>
+
+<input type="radio" name="q5" value="A">&lt;img&gt;<br>
+<input type="radio" name="q5" value="B">&lt;table&gt;<br>
+<input type="radio" name="q5" value="C">&lt;body&gt;<br><br>
+
+<center> 
+  
+  <input type="submit" value="Submit"> 
+  <input type="Reset" value="Reset">
+</center>
+
+
+</form>
+
+
+
+<script>
+
+function Submit() {
+    if (document.exam.name.value== "") {
+        alert("Name can't be blank");
+        return false;
+    }
+
+    if (document.exam.reg.value == "") {
+        alert("Enter register number");
+        return false;
+    }
+
+    var m = 0;
+
+    if (document.exam.q1.value == "A")
+        m++;
+
+    if (document.exam.q2.value == "A")
+        m++;
+
+    if (document.exam.q3.value == "B")
+        m++;
+
+    if (document.exam.q4.value == "A")
+        m++;
+
+    if (document.exam.q5.value == "A")
+        m++;
+
+    alert("Thank you for attending the exam. Your score is " + m + " out of 5");
+
+    return false;
+}
+</script>
+
+
+</body>
+</html>
+
